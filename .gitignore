@@ -1,0 +1,38 @@
+# ─── SECRETS ─── never commit, never publish ─────────────────────────────────
+# Holds the CDSE account e-mail and password in plain text, plus screenshots
+# that show the password on screen. This repository is public.
+identity.dataspace.copernicus.eu_credentials/
+*credential*
+*.token
+
+# Raw Sentinel Hub imagery cache (309 MB). Metered to fetch but fully
+# regenerable, and the published PNGs are what the page actually serves.
+cdse_cache/
+
+# Intermediate GeoTIFFs from the Earth Engine path -- regenerable.
+_gee_tmp/
+
+# Local backups of PREVIOUS products, already published at their own URLs.
+_prev_20260818/
+_prev_20260830/
+
+# Run logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.bak
+
+# Leftover AOI files from earlier products. This build reads
+# Kale_Township_Boundary.geojson -- see AOI_GEOJSON in flood_mapping.py.
+aoi.geojson
+merged_6_townships.geojson
+
+# Working screenshots
+Screenshot*.png
+
+# NOTE: assets/ is deliberately NOT ignored.
+# The two 10 m SAR backdrops are too large to base64-embed, so index.html
+# references them by relative path. Publishing without assets/ gives a
+# dashboard whose SAR layers are dead links.
