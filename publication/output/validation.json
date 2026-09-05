@@ -1,0 +1,129 @@
+{
+  "source_commit": "8f208f3d1a41823b3cbd11b684a80ad7ca2e92cf",
+  "build_commit": "8f208f3d1a41823b3cbd11b684a80ad7ca2e92cf",
+  "reproduction_mode": "lossless recovery of published classification",
+  "fresh_sentinel1_classification_run": false,
+  "method_changed": false,
+  "source_grid": {
+    "crs": "EPSG:4326",
+    "width": 3703,
+    "height": 11945,
+    "transform": [
+      8.98315290521004e-05,
+      0.0,
+      93.94618823819667,
+      0.0,
+      -8.98315290521004e-05,
+      23.656076435379255
+    ],
+    "pixel_spacing_degrees": 8.98315290521004e-05
+  },
+  "validation": {
+    "flood": {
+      "pixel_count": 1739359,
+      "area_km2": 159.92261770717099,
+      "repository_area_km2": 159.922617707171,
+      "absolute_difference_km2": 2.842170943040401e-14
+    },
+    "water": {
+      "pixel_count": 180303,
+      "area_km2": 16.588836564319784,
+      "repository_area_km2": 16.588836564319788,
+      "absolute_difference_km2": 3.552713678800501e-15
+    }
+  },
+  "source_metadata": {
+    "title": "Flood inundation 2026-08-22 \u2192 2026-09-03",
+    "pre": "2026-08-22",
+    "post": "2026-09-03",
+    "window": 0,
+    "gap": "12 days (1 repeat cycle)",
+    "pass": "Descending",
+    "pass_short": "Desc.",
+    "track": 4,
+    "source": "CDSE Sentinel Hub, gamma0 terrain",
+    "n_pre": 2,
+    "cov_pre": 100.0,
+    "n_post": 2,
+    "cov_post": 100.0,
+    "thresh": -3.0,
+    "speckle": 30,
+    "slope": 5.0,
+    "scale": 10,
+    "vil_at_m": 150,
+    "vil_near_m": 500,
+    "vil_at_frac": 5.0,
+    "vil_near_frac": 2.0,
+    "ramp": [
+      "#ece9f8",
+      "#d5cff0",
+      "#b9afe6",
+      "#9a8dd8",
+      "#7d6cc4",
+      "#5f4ea8",
+      "#443586"
+    ],
+    "breaks": [
+      0.5,
+      1,
+      3,
+      7,
+      15,
+      30
+    ],
+    "c_flood": "#e34948",
+    "c_water": "#2a78d6",
+    "c_village": "#eda100",
+    "mb_pre": 19,
+    "mb_post": 19,
+    "generated": "2026-09-04 05:16 UTC"
+  },
+  "sha256_inputs": {
+    "index.html": "85727f60d8e89275e3028d0ed374e95f11547a93688e77c64aa18ec8fa94db17",
+    "flood_stats.json": "2255a85da2b14bfca5963c421ba41e23791962d70b957457247c1ef920c857ab",
+    "flood_mapping_cdse.py": "20f9a91584e46edaf67d7c61ef7b17f222fedf97071febfa7a7493d27442a894",
+    "flood_mapping.py": "e252ca0b7b79e5b5e0adb836ae16c2b8d47172ab8895f56ba7ad7ec53f54531b",
+    "cdse_source.py": "9b227f1a4544557dda07986e22d7a90f85853c9dc20a0419dbb8f666fbe39d5d",
+    "Kale_Township_Boundary.geojson": "74c08c93737f4ceff0b512b1bca2ae7ea07d8304927794e7c148fa859e8d54c9",
+    "MyanmarTownshipBoundaries.geojson": "9894d2fd2437ca747a301b4fb6e238ed837f265a14fca80d62edcd609dba60df",
+    "assets/post_sar_01.png": "c48fa30af0aa0aaf6931441eacc10ebf7aa8254ae0d31ef621895c48c4b77ef5",
+    "assets/post_sar_02.png": "bb429b0bdd6b121214151cf78bbb8e81c74936e2c626e331e648fdaffdb2b78f",
+    "assets/post_sar_03.png": "07f07cfac7e29b61820b70c8f25cf8b66cccf72174d9db4ce8dc43c7579bb156",
+    "assets/pre_sar_01.png": "392ac7c8d709c10cea43d332a9b6274198af4a193ab74a93bb4591a6ea69c3c1",
+    "assets/pre_sar_02.png": "307a4a482ca0fd7806aed85629fc8b4d7d6363f1c0da8e1679d8ba523dc28a7d",
+    "assets/pre_sar_03.png": "8a24a02fca21e2a16676a37796fd97ef8d2cf85854b5094a44371445f9190d4e"
+  },
+  "map_projection": "EPSG:32646",
+  "display_resampling": {
+    "categorical": "nearest",
+    "SAR": "bilinear"
+  },
+  "software": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.2.6",
+    "rasterio": "1.5.0"
+  },
+  "limitations": [
+    "No original continuous dB, terrain, or validity masks archived in repository.",
+    "Zero denotes no positive class and does not guarantee assessed dry land.",
+    "Published 8-bit SAR is for display only; never used to rethreshold."
+  ],
+  "jpeg": {
+    "pixels": [
+      4962,
+      7014
+    ],
+    "dpi": [
+      600,
+      600
+    ],
+    "mode": "RGB"
+  },
+  "sha256_outputs": {
+    "flood_native.tif": "a64c6c13cb06fbb5c8169f3ef2933202030630c35d42d2bd6bf5edc362de00a0",
+    "kale_flood_publication.pdf": "a9165327815092c9acb910688d87e76b21eb92c44117a0a15fd672b8c9628203",
+    "kale_flood_publication_600dpi.jpg": "60fe36e458999954a56cf1de8749514c5875ee1c4d29a8ed0fdf9797fee56152",
+    "study_area.geojson": "bdfe4f8aa8bd372854b537fb24a150b1766cbeebb928a3f15ec870705c55eac4",
+    "water_native.tif": "df6210c352cd65687f90a5950c87005f129fc4cb01a9f5e83a22fec518d5369b"
+  }
+}
